@@ -1,7 +1,7 @@
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}/*# sourceMappingURL=normalize.min.css.map */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
 body {font: 1em/1 'Montserrat';
-      background-image: url(../assets/diamond_upholstery.png);
+      background-image: url(../assets/drkmech.png);
     }
     *{ margin: 0;padding: 0;}a{text-decoration:none;color:black;}
 
@@ -96,17 +96,22 @@ nav>ul>li>:hover {
 }
 /*  ABOUT SECTION STYLES   */
 
-#about {
+.about {
   height: 100vh;
   width: 100%;
-  background-image: url(../assets/drkmech.png);
+  margin:auto;
+  background-color: rgba(204, 204, 204, 0.9);
+  min-width: 770px;
+  max-width: 770px;
+
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
-
 }
+
+.p{margin:2em 0 2em 0;}
 
 .text>p>a {
   text-decoration: none;
@@ -117,7 +122,7 @@ nav>ul>li>:hover {
 #about>div {
   /*COLORS*/
   /*color: #f2f2f2;*/
-  background-color: rgba(204, 204, 204, 0.7);
+  /* background-color: rgba(204, 204, 204, 0.7); */
   border-radius: 1px;
   /*COLORS*/
   /*margin-left: 15%;
@@ -139,75 +144,97 @@ div.text {
 
 /*    PORTFOLIO SECTION STYLES */
 
-.prime {
-  display: flex;
-  max-width: 100%;
-  flex-flow: row wrap;
-  padding-bottom: 2em;
-}
+  .prime {
+    display: flex;
+    max-width: 60%;
+    min-width: 60%;
+    
+    flex-flow: row wrap;
+    padding-bottom: 2em;
+  }
 
-.secondary {
-  display: flex;
-  max-width: 80%;
-  flex-flow: row wrap;
-}
+  .secondary {
+    display: flex;
+    max-width: 50%;
+    min-width:50%;
+    flex-flow: row wrap;
+    padding-bottom:3em; 
+    
+  }
 
-#portfolio {
-  background-image: url(../assets/drkmech.png);
-  max-width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: stretch;
-}
+  .portfolio>h1{
 
-#portfolio>.img-set {
-  flex: 1 20%;
-  width: 1024px;
-}
-
-#portfolio>h1 {
-  display: flex;
+    margin:auto;
+    padding-top:.5em;
+    padding-bottom:.5em;
+    max-width: 770px;
+    min-width: 770px;
+    width:100%;
+  }
   
-  height: 10vh;
-  width: 100%;
-  justify-content: center;
-}
+  #portfolio{
+    margin-left:6em;
+    margin-right:6em;
+    box-shadow: 0 0 6px rgba(0,0,0,0.7) ;
+  }
+  .portfolio {
 
-#portfolio>a {
-  height: fit-content;
-}
+    background-color: rgba(204, 204, 204, 0.9);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
 
-.prime-img {
-  
-  width: 250px;
-  height: 250px;
-  border-radius: 4px;
-}
+  #portfolio>.img-set {
+    flex: 1 20%;
+    width: 1024px;
+  }
 
-.secondary-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 4px;
-}
+  .portfolio>h1 {
+    display: flex;
+    
 
-.img-set {
-  
-  height: fit-content;
-}
+    width: 100%;
+    justify-content: center;
+  }
 
-.img-set:hover {
-  opacity: 0.5;
-}
+  #portfolio>a {
+    height: fit-content;
+  }
+
+  .prime-img {
+    padding-top:2em;
+    width: 250px;
+    height: 250px;
+    border-radius: 4px;
+  }
+
+  .secondary-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+ }
+
+  .img-set {
+    
+    height: fit-content;
+  }
+
+  .img-set:hover {
+    opacity: 0.5;
+  }
 
 
 /*     CONTACT SECTION STYLES   */
 
 #contact {
-  background-image: url(../assets/drkmech.png);
-  background-color: rgba(204, 204, 204, 0.7);
+
+  background-color: rgba(204, 204, 204, 0.9);
+  margin-top:2em;
+  margin-left: 4em ;
+  margin-right: 4em ; 
   height: 20vh;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -243,7 +270,7 @@ div.text {
     #about {
       height: ;
       width: 100%;
-      background-image: url(../assets/diamond_upholstery.png);
+      background-image: url(../assets/drkmech.png);
       display: flex;
     }
     .text>p>a {
@@ -281,7 +308,7 @@ div.text {
     #about {
       height: auto;
       width: 100%;
-      background-image: url(../assets/diamond_upholstery.png);
+      background-image: url(../assets/drkmech.png);
       display: flex;
     }
     .text>p>a {
